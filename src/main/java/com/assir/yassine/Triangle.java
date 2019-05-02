@@ -1,38 +1,21 @@
 package com.assir.yassine;
 
-public class Triangle{
+import java.util.List;
 
-    Point pointA;
-    Point pointB;
-    Point pointC;
+public class Triangle {
 
-    public Point getPointA() {
-        return pointA;
+    List<Point> points;
+
+    public List<Point> getPoints() {
+        return points;
     }
 
-    public void setPointA(Point pointA) {
-        this.pointA = pointA;
+    public void setPoints(List<Point> points) {
+        this.points = points;
     }
 
-    public Point getPointB() {
-        return pointB;
-    }
-
-    public void setPointB(Point pointB) {
-        this.pointB = pointB;
-    }
-
-    public Point getPointC() {
-        return pointC;
-    }
-
-    public void setPointC(Point pointC) {
-        this.pointC = pointC;
-    }
-
-    public void draw(){
-        System.out.println("Point A = (" + getPointA().getX() + "," + getPointA().getY() + ")");
-        System.out.println("Point B = (" + getPointB().getX() + "," + getPointB().getY() + ")");
-        System.out.println("Point C = (" + getPointC().getX() + "," + getPointC().getY() + ")");
+    public void draw() {
+        for (Point point : points)
+            System.out.println("Point = (" + point.getX() + ", " + point.getY() + ")");
     }
 }
